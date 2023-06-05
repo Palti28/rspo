@@ -1,0 +1,224 @@
+@import url(/bootstrap/css/bootstrap.css);
+
+$background-color: #F6F8FA;
+$primary-brown: #AB6735;
+$playfair: 'Playfair Display', serif;
+html{
+  scroll-behavior: smooth;
+  font-size: 14px;
+}
+
+.btn-primary{
+  background-color: $primary-brown;
+  border: 0;
+  &:hover, &:focus, &:active{
+    background-color: #88522a !important
+  }
+  
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: $primary-brown;
+  --bs-btn-border-color: $primary-brown;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: $primary-brown;
+  --bs-btn-hover-border-color: $primary-brown;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: $primary-brown;
+  --bs-btn-active-border-color: $primary-brown;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: $primary-brown;
+  --bs-btn-disabled-border-color: $primary-brown;
+}
+
+//global
+body{
+  // background-color: $background-color;
+}
+.hero{
+  height: 732px;
+  background-image: url('/assets/palm-forest-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  color: #ffffff;
+
+  .collapse{
+    @media (max-width: "990px") {
+      background-color: white;
+      .nav-item{
+        padding: 0 16px;
+        a.nav-link{
+          color: black;
+        }
+      }
+    }
+  }
+
+  .navbar{
+    background-color: black;
+  }
+
+  .nav-item{
+    a.nav-link{
+      transition: all .2s;
+      color: #ffffff;
+      &:hover{
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+.welcome{
+  font-weight: 300;
+}
+
+#services{
+  .card{
+    background-color: transparent;
+    border: 0;
+    .card-title{
+      font-family: $playfair;
+      color: $primary-brown;
+      font-size: 16px;
+    }
+    .card-body{
+      padding-left: 0;
+    }
+  }
+}
+
+.f-display{
+  font-family: $playfair
+}
+
+.section-title{
+  text-align: center;
+  font-family: $playfair;
+  margin-bottom: 24px;
+}
+
+section{
+  @media (min-width: "768px") {
+    // padding: 50px; max-width: 888px; margin: auto;
+  padding: 48px 0;
+  }
+  padding: 16px;
+}
+
+#stories{
+  background-color: #FAFBFC;
+}
+.carousel{
+
+  .carousel-indicators{
+    // box-sizing: content-box;
+    // height: 10px;
+    // flex: 0 1 auto;
+    // width: 30px;
+    // height: 30px;
+    // padding: 0;
+    // border-radius: 50%;
+    // margin-right: 3px;
+    // margin-left: 3px;
+    // text-indent: -999px;
+    // cursor: pointer;
+    // background-color: #fff;
+    // background-clip: padding-box;
+    // border: 0;
+    // /* border-top: 10px solid transparent; */
+    // /* border-bottom: 10px solid transparent; */
+    button{
+
+       width: 12px;
+    height: 12px;
+    border-radius: 50%;
+          /* border-top: 10px solid transparent; */
+    /* border-bottom: 10px solid transparent; */
+    }
+  }
+
+  .carousel-item{
+    transition: transform .5s ease, opacity .8s 
+  }
+
+  padding-bottom: 44px;
+  .carousel-inner{
+    padding: 0 2.5rem;
+    margin: auto;
+    @media (min-width: "768px") {
+      max-width: 800px;
+      padding: 0 4rem;
+    }
+
+    img{
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+  .carousel-control-prev{
+    justify-content: start;
+  } 
+  .carousel-control-next{
+    justify-content: end;
+  }
+  .carousel-indicators{
+    margin-bottom: 0;
+  }
+}
+
+#testimonials{
+  color: white;
+
+  // background-image: url('/assets/palm-leaves.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.77),rgba(0, 0, 0, 0.5)) , url('/assets/palm-leaves.jpg');
+  .carousel{
+    padding-bottom: 20px;
+  }
+  #carouselTestimonials{
+    .carousel-item{
+      color: black !important;
+      font-size: 14px;
+    }
+  }
+}
+
+footer{
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  .content{
+    display: flex;
+    justify-content: space-between;
+  }
+  height: 100px;
+  background-color: $primary-brown;
+}
+
+.floating-wa-icon{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:50px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    height: 32px;
+    width: 32px
+  }
+}
